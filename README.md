@@ -1,5 +1,5 @@
 
-![](docs/assets/images/cylinter-logo.svg)
+![](cylinter-logo.svg)
 
 ## An Interactive Image Segmentation Filter for Multiplex Microscopy.
 
