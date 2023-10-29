@@ -5,7 +5,7 @@
 
 # Quality Control for Single Cell Analysis of High-plex Tissue Profiles using CyLinter
 
-Gregory J. Baker<sup>1,2,3,</sup>\*,    
+<h1>Gregory J. Baker<sup>1,2,3,</sup>\*,    
 Edward Novikov<sup>1,4,</sup>,
 Ziyuan Zhao<sup>5</sup>,
 Tuulia Vallius<sup>1,2</sup>,
@@ -15,7 +15,7 @@ Jeremy L. Muhlich<sup>2</sup>,
 Elizabeth A. Mittendorf<sup>6,7,8</sup>,
 Sandro Santagata<sup>1,2,3,9</sup>,
 Jennifer L. Guerriero <sup>1,2,6,7,8</sup>,
-Peter K. Sorger<sup>1,2,3</sup>\*
+Peter K. Sorger<sup>1,2,3</sup>\*<h1>
 
 <sup>1</sup>Ludwig Center for Cancer Research at Harvard, Harvard Medical School, Boston, MA<br>
 <sup>2</sup>Laboratory of Systems Pharmacology, Program in Therapeutic Science, Harvard Medical
@@ -34,18 +34,18 @@ School, Boston, MA<br>
 ---
 
 
-## Scientific summary
+## Abstract
 
 Tumors are complex assemblies of cellular and acellular structures patterned on spatial scales from microns to centimeters. Study of these assemblies has advanced dramatically with the introduction of methods for highly multiplexed tissue imaging methods. These reveal the intensities and spatial distributions of 20-100 proteins in 10<sup>3</sup>–<sup>7</sup> cells per specimen in a preserved tissue microenvironment. Despite extensive work on extracting single-cell image data, all tissue images are afflicted by artifacts (e.g., lint, antibody aggregates) that arise from unreliable staining of features such as necrotic domains and imperfections in specimen preparation and data acquisition. We show that artifacts dramatically impact single-cell data analysis, in extreme cases, preventing meaningful biological interpretation. We describe an interactive quality control software tool, CyLinter, that identifies and removes data associated with imaging artifacts. CyLinter greatly improves single-cell analysis, especially for archival specimens sectioned many years prior to data collection, including those from clinical trials.
 
 ![Summary figure](./docs/ExtFig5.png)
 
-**Identifying and removing noisy single-cell data points with CyLinter.** | **a-d**: CyLinter input: **a**, Multiplex microscopy file, **b**, Cell segmentation outlines, **c**, Cell ID mask, **d**, Single-cell feature table. **e**, ROI selection module: multi-channel images are viewed to identify and gate on regions of tissue affected by microscopy artifacts (in the default negative selection mode). **f-i**, Demonstration of automated artifact detection in CyLinter. **f**, CyLinter’s selectROIs module showing artifacts in the CDKN1A (green) channel of EMIT TMA core 18 (mesothelioma). **g**, Transformed version of the original CDKN1A image such that artifacts appear as large, bright regions relative to channel intensity variations associated with true signal of immunoreactive cells which are suppressed. **h**, Local intensity maxima are identified in the transformed image and a flood fill algorithm is used to create a pixel-level binary mask indicating regions of tissue affected by artifacts. In this example, the method identifies three artifacts in the image: one fluorescence aberration at the top of the core, and two tissue folds at the bottom of the core. **i**, CyLinter’s selectROIs module showing the binary artifact mask (translucent gray shapes) and their corresponding local maxima (red dots) defining each of the three artifacts. **j**, DNA intensity filter: histogram sliders are used to define lower and upper bounds on nuclear counterstain single intensity. Cells between cutoffs are visualized as scatter points at their spatial coordinates in the corresponding tissue for gate confirmation or refinement. **k**, Cell segmentation area filter: histogram sliders are used to define lower and upper bounds on cell segmentation area (pixel counts). Cells between cutoffs are visualized as scatter points at their spatial coordinates in the corresponding tissue for gate confirmation or refinement. **l**, Cross-cycle correlation filter: applicable to multi-cycle experiments. Histogram sliders are used to define lower and upper bounds on the log-transformed ratio of DNA signals between the first and last imaging cycles. Cells between cutoffs are visualized as scatter points at their spatial coordinates in their corresponding tissues for gate confirmation or refinement. **m**, Channel outlier filter: the distribution of cells according to antibody signal intensity is viewed for all sample as a facet grid of scatter plots (or hexbin plots) against cell area (y-axes). Lower and upper percentile cutoffs are applied to remove outliers. Outliers are visualized as scatter points at their spatial coordinates in their corresponding tissues for gate confirmation or refinement. **n**, MetaQC module: unsupervised clustering methods (UMAP or TSNE followed by HDBSCAN clustering) are used to correct for gating bias in prior data filtration modules by thresholding on the percent of each cluster composed of clean (maintained) or noisy (redacted) cells. **o**, Unsupervised cluster methods (UMAP or TSNE followed by HDBSCAN) are used to identify unique cell states in a given cohort of tissues. **p**, Image contrast adjustment: channel contrast settings are optimized for visualization on reference tissue which are applied to all tissues in the cohort. **q**, Evaluate cluster membership: cluster quality is checked by visualizing galleries of example cells drawn at random from each cluster identified in the clustering module (panel k). 
+**Identifying and Removing Noisy Single-cell Data Points with CyLinter.** | **a-d**: CyLinter input: **a**, Multiplex microscopy file, **b**, Cell segmentation outlines, **c**, Cell ID mask, **d**, Single-cell feature table. **e**, ROI selection module: multi-channel images are viewed to identify and gate on regions of tissue affected by microscopy artifacts (in the default negative selection mode). **f-i**, Demonstration of automated artifact detection in CyLinter. **f**, CyLinter’s selectROIs module showing artifacts in the CDKN1A (green) channel of EMIT TMA core 18 (mesothelioma). **g**, Transformed version of the original CDKN1A image such that artifacts appear as large, bright regions relative to channel intensity variations associated with true signal of immunoreactive cells which are suppressed. **h**, Local intensity maxima are identified in the transformed image and a flood fill algorithm is used to create a pixel-level binary mask indicating regions of tissue affected by artifacts. In this example, the method identifies three artifacts in the image: one fluorescence aberration at the top of the core, and two tissue folds at the bottom of the core. **i**, CyLinter’s selectROIs module showing the binary artifact mask (translucent gray shapes) and their corresponding local maxima (red dots) defining each of the three artifacts. **j**, DNA intensity filter: histogram sliders are used to define lower and upper bounds on nuclear counterstain single intensity. Cells between cutoffs are visualized as scatter points at their spatial coordinates in the corresponding tissue for gate confirmation or refinement. **k**, Cell segmentation area filter: histogram sliders are used to define lower and upper bounds on cell segmentation area (pixel counts). Cells between cutoffs are visualized as scatter points at their spatial coordinates in the corresponding tissue for gate confirmation or refinement. **l**, Cross-cycle correlation filter: applicable to multi-cycle experiments. Histogram sliders are used to define lower and upper bounds on the log-transformed ratio of DNA signals between the first and last imaging cycles. Cells between cutoffs are visualized as scatter points at their spatial coordinates in their corresponding tissues for gate confirmation or refinement. **m**, Channel outlier filter: the distribution of cells according to antibody signal intensity is viewed for all sample as a facet grid of scatter plots (or hexbin plots) against cell area (y-axes). Lower and upper percentile cutoffs are applied to remove outliers. Outliers are visualized as scatter points at their spatial coordinates in their corresponding tissues for gate confirmation or refinement. **n**, MetaQC module: unsupervised clustering methods (UMAP or TSNE followed by HDBSCAN clustering) are used to correct for gating bias in prior data filtration modules by thresholding on the percent of each cluster composed of clean (maintained) or noisy (redacted) cells. **o**, Unsupervised cluster methods (UMAP or TSNE followed by HDBSCAN) are used to identify unique cell states in a given cohort of tissues. **p**, Image contrast adjustment: channel contrast settings are optimized for visualization on reference tissue which are applied to all tissues in the cohort. **q**, Evaluate cluster membership: cluster quality is checked by visualizing galleries of example cells drawn at random from each cluster identified in the clustering module (panel k). 
 
 ---
 
 
-## CyLinter documentation
+## CyLinter Documentation
 
 ![](./docs/cylinter-logo.svg)
 
@@ -54,14 +54,14 @@ CyLinter software is written in Python3, archived on the Anaconda package reposi
 ---
 
 
-## Data availability
+## Data Availability
 
 New data associated with this paper is available at the [HTAN Data Portal](https://data.humantumoratlas.org). Previously published data is through public repositories. See Supplementary Table 1 for a complete list of datasets and their associated identifiers and repositories. Online Supplementary Figures 1-4 and the CyLinter demonstration dataset can be accessed at [Sage Synapse](https://www.synapse.org/#!Synapse:syn24193163/files).
 
 ---
 
 
-## Image processing
+## Image Processing
 
 The whole-slide and tissue microarray images described in this study were processed using [MCMICRO](https://mcmicro.org/) [[1]](#1) image assembly and feature extraction pipeline.
 
