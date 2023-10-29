@@ -1,5 +1,5 @@
-[![DOI](https://zenodo.org/badge/522617119.svg)](https://zenodo.org/records/8371088)
-![Latest release](https://img.shields.io/github/v/release/labsyspharm/orion-crc)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8371088.svg)](https://doi.org/10.5281/zenodo.8371088)
+![Latest release](https://img.shields.io/github/v/release/labsyspharm/cylinter-paper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -36,9 +36,9 @@ School, Boston, MA<br>
 
 ## Scientific summary
 
-![Summary figure](./docs/ExtFig5.png)
-
 Tumors are complex assemblies of cellular and acellular structures patterned on spatial scales from microns to centimeters. Study of these assemblies has advanced dramatically with the introduction of methods for highly multiplexed tissue imaging methods. These reveal the intensities and spatial distributions of 20-100 proteins in 10<sup>3</sup>–<sup>7</sup> cells per specimen in a preserved tissue microenvironment. Despite extensive work on extracting single-cell image data, all tissue images are afflicted by artifacts (e.g., lint, antibody aggregates) that arise from unreliable staining of features such as necrotic domains and imperfections in specimen preparation and data acquisition. We show that artifacts dramatically impact single-cell data analysis, in extreme cases, preventing meaningful biological interpretation. We describe an interactive quality control software tool, CyLinter, that identifies and removes data associated with imaging artifacts. CyLinter greatly improves single-cell analysis, especially for archival specimens sectioned many years prior to data collection, including those from clinical trials.
+
+![Summary figure](./docs/ExtFig5.png)
 
 ---
 
@@ -47,7 +47,7 @@ Tumors are complex assemblies of cellular and acellular structures patterned on 
 
 ![](./docs/cylinter-logo.svg)
 
-CyLinter software is written in Python3, archived on the Anaconda package repository, versioned controlled on Git/GitHub (https://github.com/labsyspharm/cylinter), instantiated as a configurable Python Class object, and validated for Mac and PC operating systems. Information on how to install and run the program is available at the [CyLinter website](https://labsyspharm.github.io/cylinter/). 
+CyLinter software is written in Python3, archived on the Anaconda package repository, versioned controlled on [Git/GitHub](https://github.com/labsyspharm/cylinter), instantiated as a configurable Python Class object, and validated for Mac and PC operating systems. Information on how to install and run the program is available at the [CyLinter website](https://labsyspharm.github.io/cylinter/). 
 
 ---
 
@@ -61,7 +61,7 @@ New data associated with this paper is available at the [HTAN Data Portal](https
 
 ## Image processing
 
-The whole-slide and tissue microarray images described in this study were processed using [MCMICRO](https://mcmicro.org/) [[1]](#1).
+The whole-slide and tissue microarray images described in this study were processed using [MCMICRO](https://mcmicro.org/) [[1]](#1) image assembly and feature extraction pipeline.
 
 ---
 
