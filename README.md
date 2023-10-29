@@ -1,7 +1,5 @@
 
-![](cylinter-logo.svg)
-
-## An Interactive Image Segmentation Filter for Multiplex Microscopy.
+## Quality Control for Single Cell Analysis of High-plex Tissue Profiles using CyLinter.
 
 CyLinter is quality control software for identifying and removing cell segmentation instances corrupted by optical and/or image-processing artifacts in multiplex microscopy images. The tool is user-guided and comprises a set of modular and extensible QC modules instantiated in a configurable [Python](https://www.python.org) Class object. Module results are cached to allow for dynamic restarts.
 
@@ -15,159 +13,82 @@ CyLinter development is led by [Greg Baker](https://github.com/gjbaker) at the [
 
 **Instructions:** https://labsyspharm.github.io/cylinter/
 
-[![DOI](https://zenodo.org/badge/522617119.svg)](https://zenodo.org/badge/latestdoi/522617119)
+[![DOI](https://zenodo.org/badge/522617119.svg)](https://zenodo.org/records/8371088)
 ![Latest release](https://img.shields.io/github/v/release/labsyspharm/orion-crc)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-# High-plex immunofluorescence imaging and traditional histology of the same tissue section for discovering image-based biomarkers
+# Quality Control for Single Cell Analysis of High-plex Tissue Profiles using CyLinter
 
-Jia-Ren Lin<sup>1,2,</sup>\*,
-Yu-An Chen<sup>1,2,</sup>\*,
-Daniel Campton<sup>3,</sup>\*,
-Jeremy Cooper<sup>3</sup>,
-Shannon Coy<sup>1,4</sup>,
-Clarence Yapp<sup>1,2</sup>,
-Juliann B. Tefft<sup>1,2</sup>,
-Erin McCarty<sup>3</sup>,
-Keith L. Ligon<sup>4</sup>,
-Scott J. Rodig<sup>4</sup>,
-Steven Reese<sup>3</sup>,
-Tad George<sup>3</sup>,
-Sandro Santagata<sup>1,2,4,±</sup>,
-Peter K. Sorger<sup>1,2,±</sup>
+Gregory J. Baker<sup>1,2,3,</sup>\*,    
+Edward Novikov<sup>1,4,</sup>,
+Ziyuan Zhao<sup>5</sup>,
+Tuulia Vallius<sup>1,2</sup>,
+Janae A. Davis<sup>6</sup>,
+Jia-Ren Lin<sup>2</sup>,
+Jeremy L. Muhlich<sup>2</sup>,
+Elizabeth A. Mittendorf<sup>6,7,8</sup>,
+Sandro Santagata<sup>1,2,3,9</sup>,
+Jennifer L. Guerriero <sup>1,2,6,7,8</sup>,
+Peter K. Sorger<sup>1,2,3</sup>\*
 
-*Nature Cancer (2023). DOI: [10.1038/s43018-023-00576-1](https://doi.org/10.1038/s43018-023-00576-1)*
+<sup>1</sup>Ludwig Center for Cancer Research at Harvard, Harvard Medical School, Boston, MA<br>
+<sup>2</sup>Laboratory of Systems Pharmacology, Program in Therapeutic Science, Harvard Medical
+School, Boston, MA<br>
+<sup>3</sup>Department of Systems Biology, Harvard Medical School, Boston, MA<br>
+<sup>4</sup>Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA<br>
+<sup>5</sup>Systems, Synthetic, and Quantitative Biology Program, Harvard University, Cambridge, MA<br>
+<sup>6</sup>Breast Tumor Immunology Laboratory, Dana-Farber Cancer Institute, Boston, MA<br>
+<sup>7</sup>Breast Oncology Program, Dana-Farber/Brigham and Women's Cancer Center, Boston, MA<br>
+<sup>8</sup>Division of Breast Surgery, Department of Surgery, Brigham and Women's Hospital, Boston, MA<br>
+<sup>9</sup>Department of Pathology, Brigham and Women’s Hospital, Harvard Medical School, Boston, MA<br>
+\*Corresponding Authors: gregory_baker2@hms.harvard.edu (G.J.B.), peter_sorger@hms.harvard.edu (P.K.S)<br>
 
-\* These authors contributed equally<br>
-± These authors contributed equally
-
-**Human Tissue Atlas Center** <br>
-<sup>1</sup> Laboratory of Systems Pharmacology, Harvard Medical School, Boston, MA, 02115, USA.<br>
-<sup>2</sup> Ludwig Center at Harvard, Harvard Medical School, Boston, MA 02115, USA.<br>
-<sup>3</sup> RareCyte, Inc., 2601 Fourth Ave., Seattle, WA, 98121, USA.<br>
-<sup>4</sup> Department of Pathology, Brigham and Women’s Hospital, Harvard Medical School, Boston, MA 02115, USA.<br>
-
+<!-- *Nature Cancer (2023). DOI: [10.1038/s43018-023-00576-1](https://doi.org/10.1038/s43018-023-00576-1)* -->
 
 ---
 
 
 ## Scientific summary
 
-![Summary figure](./docs/Orion_fig1a.png)
+![Summary figure](./docs/ExtFig5.png)
 
-Precision medicine is critically dependent on better methods for diagnosing and staging disease and predicting drug response. Histopathology using Hematoxylin and Eosin (H&E) stained tissue - not genomics – remains the primary diagnostic method in cancer. Recently developed highly-multiplexed tissue imaging methods promise to enhance research studies and clinical practice with precise, spatially-resolved, single-cell data. Here we describe the “Orion” platform for collecting H&E and high-plex immunofluorescence images from the same cells in a whole-slide format suitable for diagnosis. Using a retrospective cohort of 74 colorectal cancer resections, we show that IF and H&E images provide human experts and machine learning algorithms with complementary information that can be used to generate interpretable, multiplexed image-based models predictive of progression-free survival. Combining models of immune infiltration and tumor-intrinsic features achieves a nearly 20-fold discrimination between rapid and slow (or no) progression, demonstrating the ability of multi-modal tissue imaging to generate high-performance biomarkers.
+Tumors are complex assemblies of cellular and acellular structures patterned on spatial scales from microns to centimeters. Study of these assemblies has advanced dramatically with the introduction of methods for highly multiplexed tissue imaging methods. These reveal the intensities and spatial distributions of 20-100 proteins in 10<sup>3</sup>–<sup>7</sup> cells per specimen in a preserved tissue microenvironment. Despite extensive work on extracting single-cell image data, all tissue images are afflicted by artifacts (e.g., lint, antibody aggregates) that arise from unreliable staining of features such as necrotic domains and imperfections in specimen preparation and data acquisition. We show that artifacts dramatically impact single-cell data analysis, in extreme cases, preventing meaningful biological interpretation. We describe an interactive quality control software tool, CyLinter, that identifies and removes data associated with imaging artifacts. CyLinter greatly improves single-cell analysis, especially for archival specimens sectioned many years prior to data collection, including those from clinical trials.
 
+---
+
+
+## CyLinter documentation
+
+![](./docs/cylinter-logo.svg)
+
+CyLinter software is written in Python3, archived on the Anaconda package repository, versioned controlled on Git/GitHub (https://github.com/labsyspharm/cylinter), instantiated as a configurable Python Class object, and validated for Mac and PC operating systems. Information on how to install and run the program is available at the [CyLinter website](https://labsyspharm.github.io/cylinter/). 
 
 ---
 
 
 ## Data availability
 
-Full-resolution images, derived imaging data, and single-cell spatial feature tables will be released by the National Cancer Institute sponsored [repository for Human Tumor Atlas Network](https://htan-portal-nextjs.vercel.app/). While the public resource is still undergoing extensive development, we provided [exemplar data](https://www.synapse.org/#!Synapse:syn38990468) via [Synapse](https://www.synapse.org/#) for demonstration purposes. Light-weight image viewing for all the bio-specimens used in this study is made available using [Minerva](https://github.com/labsyspharm/minerva-story) and [Scope2Screen](https://github.com/labsyspharm/scope2screen) [[1]](#1).
-
-
-### Exemplar data ([`syn38990468`](https://www.synapse.org/#!Synapse:syn38990468))
-
-To download, please refer to the [Synapse documentation](https://help.synapse.org/docs/Finding-and-Downloading-Data.2003796231.html)
-
-- Files in the [exemplar data](https://www.synapse.org/#!Synapse:syn38990468)
-    ```bash
-    P37_S29-CRC01/
-    ├── quantification
-    │   └── p37_s29_a24_c59kx_e15__at__20220106_014304_946511_cellringmask.csv
-    │       # single-cell feature table
-    ├── segmentation
-    │   └── cellRingMask.tif
-    │       # labeled mask used to quantify single-cell features
-    └── registration
-        ├── p37_s29_a24_c59kx_e15__at__20220106_014304_946511.ome.tiff
-        │   # orion IF image (19-channel, 16-bit)
-        └── 18459-lsp10353-us-scan-or-001 _093059-registered.ome.tif
-            # post-orion H&E image registered to orion image (3-channel, 8-bit)
-    ```
-
-
-### Image viewing using web browsers
-
-Light-weight image viewing for all the bio-specimens used in this study is made available using [Minerva](https://github.com/labsyspharm/minerva-story) and [Scope2Screen](https://github.com/labsyspharm/scope2screen) [[1]](#1). Visit https://www.tissue-atlas.org/atlas-datasets/lin-chen-campton-2023/ to access the images.
-
-
-### Access the full dataset
-
-All images at full resolution, derived image data (e.g., segmentation masks),
-and single-cell tables are stored and can be accessed through Amazon Web
-Services (AWS) S3 once the publication is live. Detailed information and list of
-files are documented [here](datarelease-README.md).
-
+New data associated with this paper is available at the [HTAN Data Portal](https://data.humantumoratlas.org). Previously published data is through public repositories. See Supplementary Table 1 for a complete list of datasets and their associated identifiers and repositories. Online Supplementary Figures 1-4 and the CyLinter demonstration dataset can be accessed at [Sage Synapse](https://www.synapse.org/#!Synapse:syn24193163/files).
 
 ---
 
 
-## Codes for imaging data processing
+## Image processing
 
-Highplex Orion whole-slide images were processed using [MCMICRO](https://mcmicro.org/) modules with customizations to cope with the large X-Y dimension in the dataset. Registration of Orion immunofluorescence images and post-Orion H&E images was done with [PALOM](https://github.com/yu-anchen/palom).
-
-
-### Files in the `scripts-processing/` folder
-
-To process Orion images into single tables, we ran `unmicst` and `S3segmenter` to generated labeled mask and run `quantification` using the segmentation mask and the 19-channel Orion image. Version and repositories of the processing modules is listed in the `github_repo.md` file.
-
-- conda-env yaml files: environment specs for creating conda envs to run customized mcmicro modules
-- `github_repo.md` file: version and repositories of the processing modules
-- `.py` files: scripts for batch processing multiple input images
-- `file_list.csv` file: file index for batch processing
-- `markers.csv` file: antibody target names of channels in the Orion images
+The whole-slide and tissue microarray images described in this study were processed using [MCMICRO](https://mcmicro.org/) [[1]](#1).
 
 ---
 
 
-## Codes for single-cell spatial analysis
+## Funding and Acknowledgments
 
-Single-cell spatial analysis was performed using [MATLAB 2019b]((https://www.mathworks.com/products/matlab.html)). To run the provided scripts on your data, please contact authors for more details.
-
-
-### Demo for running the analysis and plotting scripts
-
-Please contact the authors for detailed information.
-
-```matlab
-%% Optimize ImmuneScore
-
-markers = {'CD3','CD8','CD45','CD45RO','CD68','CD163','CD4','CD20','SMA'};
-regions = {'R1','R2'};
-figure;
-
-for i = 1:length(markers)
-    for j = 1:length(regions)
-        subplot(3,6,(i-1)*length(regions)+j);
-        marker1 = strcat('norm_',markers{i},regions{j});
-        list1 = sumAllsample{:,marker1};
-        list2 = sumAllsample.PFSDays;
-        scatter(list1,list2,30,'b','fill');
-        lsline;
-        title(num2str(corr(list1,list2),'%0.2f'),'FontSize',16);
-        set(gca,'xtick',[]);
-        xlabel(marker1,'Interpreter','none');
-        set(gca,'ytick',[]);
-        ylabel('PFS Days');
-    end
-end
-```
-
-
----
-
-
-## Funding
-
-This work was supported by NCI grants U54-CA225088 and U2C-CA233262 (P.K.S. and S.S.), an NCI SBIR small business grant R41-CA224503 (RareCyte and P.K.S.) and commercial investment from RareCyte; image processing software and data science methods were developed with support from the Bill and Melinda Gates Foundation grant INV-027106 (P.K.S.), a Team Science Grant from the Gray Foundation (P.K.S. and S.S.), the David Liposarcoma Research Initiative (P.K.S. and S.S.), Emerson Collective (P.K.S.) and Ludwig Cancer Research (P.K.S. and S.S.). J.-R.L. is supported by an NCI Research Specialist Award (R50-CA274277), and S.C. by training grants T32-GM007748 from the NIGMS and T32-CA009216 from the NCI. S.S. is also supported by the BWH President’s Scholars Award.
+This work was supported by the Ludwig Cancer Research and the Ludwig Center at Harvard (P.K.S., S.S.) and by NIH NCI grants U54-CA225088, U2C-CA233280, and U2C-CA233262 (P.K.S., S.S.). Development of computational methods and image processing software is supported by a Team Science Grant from the Gray Foundation (P.K.S., S.S.), the Gates Foundation grant INV-027106 (P.K.S.), the David Liposarcoma Research Initiative (P.K.S., S.S.), Emerson Collective (P.K.S.). S.S. is supported by the BWH President’s Scholars Award. We gratefully acknowledge Juliann Tefft for superb editorial support; Kai Wucherpfennig and Sascha Marx for providing the HNSCC CODEX dataset; Zoltan Maliga and Connor Jacobson for providing CyCIF EMIT TMA 22 images; and the Dana-Farber/Harvard Cancer Center for use of the Specialized Histopathology Core, which provided TMA construction and sectioning services. We also thank Yu-An Chen for assisting in the collection of CyCIF data from the SARDANA-097 tissue sample performed as part of the National Cancer Institute (NCI) Human Tumor Atlas Network (HTAN). 
 
 ---
 
 ## References
 
 <a id="1">[1]</a>
-J. Jessup and R. Krueger et al., "Scope2Screen: Focus+Context Techniques for Pathology Tumor Assessment in Multivariate Image Data," in IEEE Transactions on Visualization and Computer Graphics, vol. 28, no. 1, pp. 259-269, Jan. 2022, doi: 10.1109/TVCG.2021.3114786.
-
+Schapiro, D., Sokolov, A., Yapp, C. et al. MCMICRO: a scalable, modular image-processing pipeline for multiplexed tissue imaging. **Nature Methods** 19, 311–315 (2022). https://doi.org/10.1038/s41592-021-01308-y
 
