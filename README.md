@@ -5,7 +5,7 @@
 
 # Quality Control for Single Cell Analysis of High-plex Tissue Profiles using CyLinter
 
-<h1>Gregory J. Baker<sup>1,2,3,</sup>\*,    
+<h6>Gregory J. Baker<sup>1,2,3,</sup>\*,    
 Edward Novikov<sup>1,4,</sup>,
 Ziyuan Zhao<sup>5</sup>,
 Tuulia Vallius<sup>1,2</sup>,
@@ -15,7 +15,7 @@ Jeremy L. Muhlich<sup>2</sup>,
 Elizabeth A. Mittendorf<sup>6,7,8</sup>,
 Sandro Santagata<sup>1,2,3,9</sup>,
 Jennifer L. Guerriero <sup>1,2,6,7,8</sup>,
-Peter K. Sorger<sup>1,2,3</sup>\*<h1>
+Peter K. Sorger<sup>1,2,3</sup>\*</h6>
 
 <sup>1</sup>Ludwig Center for Cancer Research at Harvard, Harvard Medical School, Boston, MA<br>
 <sup>2</sup>Laboratory of Systems Pharmacology, Program in Therapeutic Science, Harvard Medical
