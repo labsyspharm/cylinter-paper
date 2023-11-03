@@ -35,7 +35,12 @@ School, Boston, MA<br>
 
 Tumors are complex assemblies of cellular and acellular structures patterned on spatial scales from microns to centimeters. Study of these assemblies has advanced dramatically with the introduction of methods for highly multiplexed tissue imaging. These reveal the intensities and spatial distributions of 20-100 proteins in 10<sup>3</sup>–<sup>7</sup> cells per specimen in a preserved tissue microenvironment. Despite extensive work on extracting single-cell image data, all tissue images are afflicted by artifacts (e.g., folds, debris, antibody aggregates, optical effects, image processing errors) that arise from imperfections in specimen preparation, data acquisition, image assembly, and feature extraction. We show that artifacts dramatically impact single-cell data analysis, in extreme cases, preventing meaningful biological interpretation. ¬We describe an interactive quality control software tool, CyLinter, that identifies and removes data associated with imaging artifacts. CyLinter greatly improves single-cell analysis, especially for archival specimens sectioned many years prior to data collection, including those from clinical trials.
 
+The Python code (i.e., Jupyter Notebooks) in this GitHub repository was used to generate the figures in this study.
+
+[Click to read preprint](https://doi.org/10.1101/2023.11.01.565120) [[1]](#1)
+
 ---
+
 
 
 ## CyLinter Workflow
@@ -66,7 +71,7 @@ New data associated with this paper is available at the [HTAN Data Portal](https
 
 ## Image Processing
 
-The whole-slide and tissue microarray images described in this study were processed using [MCMICRO](https://mcmicro.org/) [[1]](#1) image assembly and feature extraction pipeline.
+The whole-slide and tissue microarray images described in this study were processed using [MCMICRO](https://mcmicro.org/) [[2]](#2) image assembly and feature extraction pipeline.
 
 ---
 
@@ -77,8 +82,19 @@ This work was supported by the Ludwig Cancer Research and the Ludwig Center at H
 
 ---
 
+## Zenodo Archive
+
+The Python code (i.e., Jupyter Notebooks) in this GitHub repository is archived on Zenodo at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10067804.svg)](https://doi.org/10.5281/zenodo.10067804).
+
+---
+
+
 ## References
 
 <a id="1">[1]</a>
-Schapiro, D., Sokolov, A., Yapp, C. et al. MCMICRO: a scalable, modular image-processing pipeline for multiplexed tissue imaging. **Nature Methods** 19, 311–315 (2022). https://doi.org/10.1038/s41592-021-01308-y
+Baker GJ. et al. Quality Control for Single Cell Analysis of High-plex Tissue Profiles using CyLinter. **bioRxiv** (2023) https://doi.org/10.1101/2023.11.01.565120
+
+<a id="1">[2]</a>
+Schapiro D., Sokolov A., Yapp C. et al. MCMICRO: a scalable, modular image-processing pipeline for multiplexed tissue imaging. **Nature Methods** 19, 311–315 (2022). https://doi.org/10.1038/s41592-021-01308-y
+
 
