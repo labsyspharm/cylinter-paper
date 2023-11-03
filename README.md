@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-# Quality Control for Single Cell Analysis of High-plex Tissue Profiles using CyLinter
+# Computational Notebook for "Quality Control for Single Cell Analysis of High-plex Tissue Profiles using CyLinter"
 
 <h5>Gregory J. Baker<sup>1,2,3,*</sup>,    
 Edward Novikov<sup>1,4,</sup>,
