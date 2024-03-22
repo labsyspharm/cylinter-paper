@@ -2,8 +2,13 @@
 *~
 
 # CyLinter directories
-input/
-output/
+input
+output
+
+src/**/*.pdf
+src/**/*.png
+src/**/*.csv
+src/**/*.yml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
