@@ -2,7 +2,7 @@
 *~
 
 # CyLinter directories
-input
+datasets
 output
 
 src/**/*.pdf
