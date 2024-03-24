@@ -43,7 +43,7 @@ conda activate cylinter-paper
 
 ```
 
-Run the computational notebook in Jupyter lab with the following command:
+Run the computational notebook in JupyterLab with the following command:
 ```bash
 jupyter lab
 
