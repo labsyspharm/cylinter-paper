@@ -29,13 +29,13 @@ School, Boston, MA<br>
 <sup>9</sup>Department of Pathology, Brigham and Women’s Hospital, Harvard Medical School, Boston, MA<br>
 \*Corresponding Authors: gregory_baker2@hms.harvard.edu (G.J.B.), peter_sorger@hms.harvard.edu (P.K.S)<br>
 
-[CyLinter BioRxiv Preprint](https://doi.org/10.1101/2023.11.01.565120) [[1]](#1)
+[BioRxiv preprint](https://doi.org/10.1101/2023.11.01.565120) [[1]](#1)
 
 ## Abstract
 Tumors are complex assemblies of cellular and acellular structures patterned on spatial scales from microns to centimeters. Study of these assemblies has advanced dramatically with the introduction of high-plex spatial profiling. Image-based profiling methods reveal the intensities and spatial distributions of 20-100 proteins at subcellular resolution in 10<sup>3</sup>–<sup>7</sup> cells per specimen. Despite extensive work on methods for extracting single-cell data from these images, all tissue images contain artefacts such as folds, debris, antibody aggregates, optical aberrations and image processing errors that arise from imperfections in specimen preparation, data acquisition, image assembly, and feature extraction. We show that these artefacts dramatically impact single-cell data analysis, obscuring meaningful biological interpretation. ¬We describe an interactive quality control software tool, CyLinter, that identifies and removes data associated with imaging artefacts. CyLinter greatly improves single-cell analysis, especially for archival specimens sectioned many years prior to data collection, such as those from clinical trials.
 
 ## Running the computational notebook
-The Python code (i.e., Jupyter Notebooks) in this GitHub repository was used to generate the figures in this study. To run the code, first clone this repo onto your computer. Then download the "datasets" folder from the Sage Bionetworks Synpase data repository [here](https://www.synapse.org/#!Synapse:syn24193163/files/) into the top level of the cloned repo. Next, change directories into the cloned repo and create and activate a dedicated Conda environment with the necessary Python libraries by running the following commands from the top level of the cloned repo:
+The Python code (i.e., Jupyter Notebooks) in this GitHub repository was used to generate figures in the paper. To run the code, first clone this repo onto your computer. Then download the [datasets folder](https://www.synapse.org/#!Synapse:syn24193163/files/) from the Sage Bionetworks Synpase data repositoryinto the top level of the cloned repo. Next, change directories into the top level of the cloned repo and create and activate a dedicated Conda environment with the necessary Python libraries by running the following commands:
 
 ```bash
 conda create -n cylinter-paper python=3 --file requirements.txt
@@ -43,7 +43,7 @@ conda activate cylinter-paper
 
 ```
 
-Open Jupyter lab with the following command:
+Run the computational notebook in Jupyter lab with the following command:
 ```bash
 jupyter lab
 
